@@ -3249,9 +3249,9 @@ void CGameContext::ConRainbowNameVIP(IConsole::IResult *pResult, void *pUserData
 
 void CGameContext::ConShrug(IConsole::IResult *pResult, void *pUserData)
 {
-    CGameContext *pSelf = (CGameContext *)pUserData;
-    if(!pSelf->m_apPlayers[pResult->m_ClientID])
-        return;
+	CGameContext *pSelf = (CGameContext *)pUserData;
+	if(!pSelf->m_apPlayers[pResult->m_ClientID])
+		return;
 
-    pSelf->SendChat(pResult->m_ClientID, CHAT_ALL, -1, "¯\\_(ツ)_/¯", pResult->m_ClientID);
+	pSelf->SendChat(pResult->m_ClientID, CHAT_ALL, -1, "¯\\_(ツ)_/¯", pResult->m_ClientID);
 }
